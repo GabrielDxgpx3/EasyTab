@@ -1,20 +1,14 @@
 #include <iostream>
-#include <gtkmm.h>
-#include <pessoaModel.hpp>
+#include "view/Login.h"
+#include "view/Home.h"
 
-int main(int argc, char *argv[]){
+int main(int argc, char* argv[]){
 
-	PessoaModel pessoa;
+	auto app = Gtk::Application::create(argc, argv, "com.gtkmm.easytab");
 
-	auto app = Gtk::Application::create(argc, argv, "com.gtkmm.exemplo");
+	Login login;
+	Home home;
 
-	auto builder = Gtk::Builder::create();
+	return app->run(*login.getJanela());
 
-	builder->add_from_file("style.glade");
-
-	Gtk::Window* janela = nullptr;
-
-	builder->get_widget("janelaId", janela);
-
-	return app->run(*janela);
 }

@@ -1,0 +1,28 @@
+#btn-menu{
+	border-radius: 0px;
+	border: none;
+	background-image: none;
+	font-size: 1em;
+	color: rgba(0,0,0,0.5);
+	
+	background-color: #999 ;
+
+}
+
+#barra-lateral{
+	background-color: #999
+
+}
+
+#menu-background{
+	/*background-color: #F5E1CC;*/
+	background-color: rgb(219,219,219);
+}
+
+#btn-menu:hover{
+	transition: 0.7s;
+	background-color: #aedede;
+	box-shadow: none;
+	border: none;
+	
+}

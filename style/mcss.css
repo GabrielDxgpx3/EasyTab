@@ -1,0 +1,13 @@
+#bglogin{
+	background-image: -gtk-gradient (linear,
+	   left top,
+       left bottom,
+       from (#0083B0),
+       to (#00B4DB));
+}
+
+#tbranco{
+	color: #fff;
+}
+
+    
