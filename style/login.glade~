@@ -4,6 +4,7 @@
   <requires lib="gtk+" version="3.20"/>
   <!-- interface-css-provider-path mcss.css -->
   <object class="GtkApplicationWindow" id="JanelaId">
+    <property name="name">bg_login</property>
     <property name="can_focus">False</property>
     <property name="border_width">122</property>
     <child>
@@ -11,21 +12,33 @@
     </child>
     <child>
       <object class="GtkBox">
-        <property name="name">teste</property>
-        <property name="width_request">300</property>
-        <property name="height_request">206</property>
+        <property name="name">box_login</property>
+        <property name="width_request">469</property>
+        <property name="height_request">470</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="halign">center</property>
         <property name="valign">center</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkLabel">
+          <object class="GtkBox">
+            <property name="name">barra_sup_login</property>
+            <property name="height_request">47</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="label" translatable="yes">Usuário</property>
-            <property name="justify">fill</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Login</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -34,12 +47,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="inUsuarioLoginId">
-            <property name="height_request">40</property>
+          <object class="GtkImage">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="margin_top">6</property>
-            <property name="margin_bottom">8</property>
+            <property name="can_focus">False</property>
+            <property name="margin_top">23</property>
+            <property name="margin_bottom">12</property>
+            <property name="pixbuf">../imagens/logo_min.png</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -49,10 +62,13 @@
         </child>
         <child>
           <object class="GtkLabel">
+            <property name="name">txt_login</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="halign">start</property>
-            <property name="label" translatable="yes">Senha</property>
+            <property name="margin_left">67</property>
+            <property name="label" translatable="yes">Usuário</property>
+            <property name="justify">fill</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -61,14 +77,15 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="inSenhaLoginId">
-            <property name="width_request">311</property>
+          <object class="GtkEntry" id="inUsuarioLoginId">
+            <property name="name">in_login</property>
+            <property name="width_request">340</property>
             <property name="height_request">40</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="margin_top">6</property>
-            <property name="visibility">False</property>
-            <property name="invisible_char">•</property>
+            <property name="halign">center</property>
+            <property name="margin_top">3</property>
+            <property name="margin_bottom">11</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -77,20 +94,55 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
-            <property name="label" translatable="yes">Login</property>
-            <property name="width_request">133</property>
-            <property name="height_request">35</property>
+          <object class="GtkLabel">
+            <property name="name">txt_login</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="halign">end</property>
-            <property name="margin_top">19</property>
+            <property name="can_focus">False</property>
+            <property name="halign">start</property>
+            <property name="margin_left">67</property>
+            <property name="label" translatable="yes">Senha</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="inSenhaLoginId">
+            <property name="name">in_login</property>
+            <property name="width_request">340</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">center</property>
+            <property name="margin_top">3</property>
+            <property name="visibility">False</property>
+            <property name="invisible_char">•</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton">
+            <property name="label" translatable="yes">Login</property>
+            <property name="name">botao_login</property>
+            <property name="width_request">135</property>
+            <property name="height_request">39</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="halign">end</property>
+            <property name="margin_right">30</property>
+            <property name="margin_top">24</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">6</property>
           </packing>
         </child>
       </object>

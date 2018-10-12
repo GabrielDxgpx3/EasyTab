@@ -4,7 +4,6 @@ Home::Home(){
 
 	auto builder = Gtk::Builder::create();
 	builder->add_from_file("../style/main.glade");
-
 	builder->get_widget("JanelaId", window);
 	window->fullscreen();
 

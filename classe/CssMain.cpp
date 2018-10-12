@@ -2,7 +2,6 @@
 #include "stdio.h"
 
 CssMain::CssMain(Gtk::Window* janela, const char* css){
-
 	auto screen = Gdk::Screen::get_default();
 	auto cssbuilder = Gtk::CssProvider::create();
 	auto ctx = janela->get_style_context();

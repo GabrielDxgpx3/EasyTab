@@ -7,6 +7,10 @@ class Login{
 	public:
 		Login();
 		Gtk::Window* window = nullptr;
+		Gtk::Button*  btnLogin = nullptr;
+
+		void onLogin();
+
 		Gtk::Window* getJanela();
 
 
